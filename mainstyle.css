@@ -108,6 +108,6 @@ ul.topnav li.right {float: right;}
 
 .block-item-text {
     width: 60%;
-    float: right;
+    float: left;
     display: inline-block;
 }
