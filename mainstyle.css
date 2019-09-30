@@ -94,6 +94,7 @@ ul.topnav li.right {float: right;}
     margin: 0 auto;
     border: 5px solid #EFEFEF;
     background-color: #CCCCCC;
+    display: block;
 }
 
 .block-item-picture {
