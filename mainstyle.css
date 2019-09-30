@@ -96,10 +96,12 @@ ul.topnav li.right {float: right;}
 
 .block-item-picture {
     width: 40%;
+    float: left;
     display: inline-block;
 }
 
 .block-item-text {
     width: 60%;
+    float: left;
     display: inline-block;
 }
