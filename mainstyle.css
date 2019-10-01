@@ -89,12 +89,13 @@ ul.topnav li.right {float: right;}
 }
 
 .block-item {
-    width: 40%;
+    width: 90%;
     height: 20%;
     margin: 0 auto;
-    border: 5px solid #EFEFEF;
+    border: 5px solid #FFFFFF;
     background-color: #CCCCCC;
-    display: block;
+    overflow: hidden;
+    max-width: 800px;
 }
 
 .block-item-picture {
