@@ -131,3 +131,10 @@ h1 {
     overflow: hidden;
     max-width: 600px;
 }
+
+code {
+    line-height: 2;
+    border-radius: 3px;
+    background-color: #FEFEFE;
+    padding: .2em .4em;   
+}
