@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/mainstyle.css">
+		<title>Notes & Articles | foliagecanine.github.io</title>
+	</head>
+	<body>
+		<ul class="topnav">
+		  <li><a href="/">Home</a></li>
+		  <li><a href="/projects">Projects</a></li>
+		  <li><a class="active" href="/notes-articles">Notes & Articles</a></li>
+		  <li class="right"><a href="/about">About</a></li>
+		</ul>
+		<div class="content">
+        <div class="article">
+          <h1>Licenses? Who cares about licenses?</h1>
+          <p>Which license to choose? This article goes through the various licenses.</p>
+          <byline>foliagecanine - 10/4/2019</byline>
+          <br>
+          <h2>DISCLAIMER</h2>
+          <p><strong>
+            No information contained in this page should be construed as legal advice.<br>
+            I disclaim all liability for actions you take or fail to take based on any content on this site.<br>
+            Additionally, I disclaim all liability for the accuracy of information on this site.<br>
+            It is your responsibility to do further research or consult with a professional.
+            </strong><br><br>
+            Much of the information on this page is my personal opinion.
+          </p>
+          <br>
+          <h2>Do I need a license?</h2>
+          <p>
+            Are you planning on having anyone but you use it? If so, yes.<br>
+            By default, your work is COPYRIGHTED under an "all rights reserved" statement! That means you must give each person you give it to permission to use it.
+          
+            ... To be continued
+          </p>
+       </div>
+      </div>
+		</div>
+	</body>
+</html>
