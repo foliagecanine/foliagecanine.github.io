@@ -24,12 +24,39 @@
 				This was my first GUI program.
           		</p>
 			<div style="background-color: #CCC; display: inline-block;">
-			<h2>License</h2>
+				<h2>License</h2>
 				<p>
 					This project is licensed under the <strong>MIT License</strong><br>
 					You can view the license <a href="https://raw.githubusercontent.com/foliagecanine/chainlink-linker/master/LICENSE">here</a>
 				</p>
 			</div>
+			<br>
+			<p>The following text comes from the project's makefile.</p>
+			<h2>Build instructions</h2>
+			<p>
+				First, install necessary packages (all installations will be for Debian-based systems):<br>
+				<code>sudo apt-get install gcc libgtk-3-dev</code><br>
+				Then run<br>
+				<code>make</code><br>
+				to make the binary. It will appear as chainlink in the root build folder.
+			</p>
+			<h2>Installation instructions</h2>
+			<p>
+				You can run<br>
+				<code>sudo make install</code><br>
+				to install just the binary OR run<br>
+				<code>sudo make install-desktop</code><br>
+				to install the binary and an icon.
+			</p>
+			<h2>Uninstallation instructions</h2>
+			<p>
+				Run<br>
+				<code>sudo make uninstall</code><br>
+				to uninstall the binary only OR<br>
+				run<br>
+				<code>sudo make uninstall-desktop</code><br>
+				to uninstall the binary and icon.
+			</p>
 		</div>
 	</body>
 </html>
