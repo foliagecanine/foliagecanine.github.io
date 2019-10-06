@@ -132,6 +132,13 @@ h1 {
     max-width: 600px;
 }
 
+@media screen & (max-width: 600px){
+    .block-article {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
 code {
     line-height: 2;
     border-radius: 3px;
