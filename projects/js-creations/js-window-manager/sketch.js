@@ -25,7 +25,7 @@
  */
 
 function setup() {
-	createCanvas(windowWidth, windowHeight-4);
+	createCanvas(windowWidth, windowHeight-46);
 	//windowMaze();
 }
 
