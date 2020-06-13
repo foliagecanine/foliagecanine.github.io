@@ -19,7 +19,7 @@
 				<p><a href="/notes-articles">⮨Notes & Articles</a></p>
 				<h1>Licenses? Who cares about licenses?</h1>
 				<p>Which license to choose? This article goes through the various licenses.</p>
-				<byline>foliagecanine - 10/5/2019</byline>
+				<byline>foliagecanine - 6/13/2020</byline>
 				<br>
 				<h2>DISCLAIMER</h2>
 				<p><strong>
@@ -28,7 +28,7 @@
 				Additionally, I disclaim all liability for the accuracy of information on this site.<br>
 				It is your responsibility to do further research or consult with a professional.
 				</strong><br><br>
-				Much of the information on this page is my personal opinion.
+				I am not a lawyer. Much of the information on this page is my personal opinion.
 				</p>
 				<br>
 				<h2>Do I need a license?</h2>
@@ -66,12 +66,67 @@
 					However, the main difference between GPL and LGPL is that LGPL is that with GPL, you must license the entire thing as GPL if you used GPL code. With LGPL, you can just license that portion of code as LGPL. You don't have to change the entire project's license.<br>
 					This makes it much more flexible when trying to use others' code as inspiration or just putting it in because it works. Otherwise, you might not be able to do that if you were using a license like the MIT license. You would have to decide between using this great code and changing the license to GPL or not using the code at all.<br>
 					<br><br>
-					To be continued...
+					<strong>Pros</strong>
+					<ol>
+						<li>... pretty much same as GPL</li>
+						<li>Can use LGPL in other projects with limitations. LGPL is generally for libraries to be dynamicly linked</li>
+					</ol>
+					<strong>Cons</strong>
+					<ol>
+						<li>... pretty much same as GPL</li>
+						<li>Still can't use LGPL in other projects (with different licenses) in many situations</li>
+					</ol>
 				</p>
 				<h2>What are some other options?</h2>
 				<p>
 					Another somewhat popular license is the Apache License.<br>
-					
+					This license is a pretty permissive license, with additional information on patents and trademarks.<br>
+					<strong>Pros</strong>
+					<ol>
+						<li>People can't use your work without credit</li>
+						<li>People can do pretty much whatever they want with it (with exceptions)</li>
+						<li>You can include it inside of other works (e.g. use one file that uses Apache license inside a project that's mostly MIT. Just be careful to do it correctly)</li>
+					</ol>
+					<strong>Cons</strong>
+					<ol>
+						<li>Very long and legalese document</li>
+					</ol>
+					<strong>Considerations</strong>
+					<ol>
+						<li>The full copyright text (not necessarily the file) must be included, even if it's modified<li>
+						<li>Any NOTICE file must be included</li>
+						<li>You must state changes made to the project (can be good or bad in certain situations)</li>
+					</ol>
+				</p>
+				<h2>Simple and permissive</h2>
+				<p>
+					Another license (my personal favorite) is the MIT license<br>
+					This license is a simple, permissive license that can pretty easily be read, even by those who don't know how to read legalese.<br>
+					<strong>Pros</strong>
+					<ol>
+						<li>People can't use your work without credit</li>
+						<li>People can do pretty much whatever they want with it (with exceptions)</li>
+						<li>You can include it inside of other works</li>
+					</ol>
+					<strong>Cons</strong>
+					<ol>
+						<li>Doesn't offer specificity relating to trademarks and patents like Apache</li>
+					</ol>
+					Pretty much all you need to do to use MIT-licensed code is place the license with the code and you're good to go!
+				</p>
+				<h2>The do-whatever-you-want license</h2>
+				<p>
+					Lastly there's the UNLICENSE. It effectively says "I give up my copyright to the public domain."<br>
+					All it includes is a statement that releases it to the public domain and a disclaimer.
+					<strong>Pros</strong>
+					<ol>
+						<li>Anyone can do anything with it as if they had created it (except the original work is in the public domain)</li>
+					</ol>
+					<strong>Cons</strong>
+					<ol>
+						<li>Anyone can do anything with it as if they had created it (except the original work is in the public domain)</li>
+						<li>(they don't need to give credit, include a license file, etc.)
+					</ol>
 				</p>
 			</div>
 		</div>
