@@ -101,6 +101,7 @@ h1 {
     background-color: #CCCCCC;
     overflow: hidden;
     max-width: 800px;
+    margin-bottom: 10px;
 }
 
 .block-item-picture {
@@ -130,6 +131,7 @@ h1 {
     background-color: #CCCCCC;
     overflow: hidden;
     max-width: 600px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 600px){
