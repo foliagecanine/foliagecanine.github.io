@@ -151,7 +151,7 @@ code {
     overflow-x: auto;
 }
 
-code .line::before {
+code.bash .line::before {
     content: "$";
     padding-right: 4px;   
 }
