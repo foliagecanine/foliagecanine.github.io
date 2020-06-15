@@ -67,7 +67,44 @@ Exec=droidcam
 Comment=Use your Android phone as a wireless webcam or an IP Cam!
 Categories=GNOME;GTK;Video;</code><br><br>
 					Now test it by going into your applications and launching Droidcam. You should see a window pop up.
+					<br><br>
+					Next, head over to <a href="https://github.com/pzmarzly/mic_over_mumble">https://github.com/pzmarzly/mic_over_mumble</a> and press download and download as ZIP. Save it in a place where you'll remember.<br>
+					Unzip it to another folder and then use a terminal to enter the directory.<br>
+					You should see a few files, including one called "mic_over_mumble"<br>
+					Now type
+					<code class="bash">./mic_over_mumble</code> and follow the instructions on the terminal.<br>
+					At the end, it should say "Press Return to shut down"<br>
+					<strong>Don't</strong> press return right now.
 				</p>
+				<h2>Setting up the Android device</h2>
+				<p>
+					First, head over to the Google Play store and find <a href="https://play.google.com/store/apps/details?id=com.dev47apps.droidcam">DroidCam Wireless Webcam by Dev47Apps</a><br>
+					Download it.<br>
+					Then search for <a href="https://play.google.com/store/apps/details?id=com.morlunk.mumbleclient.free">Plumble - Mumble VOIP (Free)</a><br>
+					Download that too.<br>
+					<br>
+				</p>
+				<h2>Connecting the Android device to your computer</h2>
+				<p>
+					Open up the DroidCam app and it should give your phone's IP address.<br>
+					On your computer, in the Droidcam window, type in the IP address shown on your Android device in the box labelled "Phone IP".<br>
+					In the box labelled "DroidCam Port", type in the port shown on your Android device.<br>
+					Make sure "WiFi/LAN" is selected<br>
+					Make sure "Enable Video" is selected but NOT "Enable Audio"<br>
+					Now click the "Connect" button.<br>
+					Your phone should now show up as a webcam device labelled "Droidcam"<br>
+					You can open an app like "Cheese" (photo app for Ubuntu) to test it.
+					<br>
+					Now press the home button on your Android device and open up the "Plumble Free" app.
+					Press the + button and type in the IP address of your computer. You can find your IP address with<br>
+					<code class="bash">ifconfig</code><br>
+					It should not be 127.0.0.1<br>
+					Now press the add button.<br>
+					Tap on the new box, and you should be connected.<br>
+					You can find it in the microphones as "VirtualMic"<br>
+					<br>
+					That's it! Now you've got a webcam and a microphone!
+				</p> 
 				<br>
 				Android is a trademark of Google LLC.
 				Windows is a trademark of Microsoft Corporation.
@@ -76,8 +113,8 @@ Categories=GNOME;GTK;Video;</code><br><br>
 		</div>
 		<script>
 			//Following JavaScript modified from code by jayms at stackoverflow.com. Licensed under CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
-			var _pre = document.querySelector("code.bash");
-			_pre.innerHTML="<span class='line'>"+(_pre.textContent.split("\n").filter(Boolean).join("</span>\n<span class='line'>"))+"</span>";
+			var _pre = document.querySelectorAll("code.bash");
+			_pre.forEach(function(i){i.innerHTML="<span class='line'>"+(i.textContent.split("\n").filter(Boolean).join("</span>\n<span class='line'>"))+"</span>";});
 			//End of JavaScript code
 		</script>
 	</body>
