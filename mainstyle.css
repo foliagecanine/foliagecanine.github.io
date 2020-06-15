@@ -147,4 +147,6 @@ code {
     background-color: #FEFEFE;
     padding: .2em .4em;
     display: block;
+    content: "$";
+    padding-right: 8px;
 }
