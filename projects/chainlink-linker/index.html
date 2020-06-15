@@ -35,28 +35,34 @@
 			<h2>Build instructions</h2>
 			<p>
 				First, install necessary packages (all installations will be for Debian-based systems):<br>
-				<code class="bash">sudo apt-get install gcc libgtk-3-dev<br></code><br>
+				<code class="bash">sudo apt-get install gcc libgtk-3-dev</code><br>
 				Then run<br>
-				<code class="bash">make<br></code><br>
+				<code class="bash">make</code><br>
 				to make the binary. It will appear as chainlink in the root build folder.
 			</p>
 			<h2>Installation instructions</h2>
 			<p>
 				You can run<br>
-				<code class="bash">sudo make install<br></code><br>
+				<code class="bash">sudo make install</code><br>
 				to install just the binary OR run<br>
-				<code class="bash">sudo make install-desktop<br></code><br>
+				<code class="bash">sudo make install-desktop</code><br>
 				to install the binary and an icon.
 			</p>
 			<h2>Uninstallation instructions</h2>
 			<p>
 				Run<br>
-				<code class="bash">sudo make uninstall<br></code><br>
+				<code class="bash">sudo make uninstall</code><br>
 				to uninstall the binary only OR<br>
 				run<br>
-				<code class="bash">sudo make uninstall-desktop<br></code><br>
+				<code class="bash">sudo make uninstall-desktop</code><br>
 				to uninstall the binary and icon.
 			</p>
 		</div>
+		<script>
+			//Following JavaScript modified from code by jayms at stackoverflow.com. Licensed under CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
+			var _pre = document.querySelector("code.bash");
+			_pre.innerHTML="<span class='line'>"+(_pre.textContent.split("\n").filter(Boolean).join("</span>\n<span class='line'>"))+"</span>";
+			//End of JavaScript code
+		</script>
 	</body>
 </html>
