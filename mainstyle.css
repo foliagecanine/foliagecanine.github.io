@@ -148,6 +148,7 @@ code {
     padding: .2em .4em;
     display: block;
     width: 50%;
+    white-space: pre-line;
 }
 
 code::before {
