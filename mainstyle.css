@@ -149,7 +149,6 @@ code {
     display: block;
     width: 50%;
     overflow-x: auto;
-    white-space: pre-line;
 }
 
 code .line::before {
