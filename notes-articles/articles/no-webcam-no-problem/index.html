@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+No webcam? No pro<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -15,7 +15,7 @@
 		</ul>
 		<div class="content">
 			<div class="article">
-				<p><a href="/notes-articles">⮨Notes & Articles</a></p>
+				<p><a href="/notes-articles">⮨Notes & Articles</a></p>No webcam? No proNo webcam? No pro
 				<h1>No webcam? No problem!</h1>
 				<p>How to use your android device as a webcam and a microphone for your peripheral-impaired Ubuntu install</p>
 				<byline>foliagecanine - 6/13/2020</byline>
@@ -52,23 +52,23 @@
 				<p>
 					First, we'll install the Droidcam client from dev47apps.com (commands based off of instructions on <a href="https://www.dev47apps.com/droidcam/linuxx/">dev47apps.com/droidcam/linuxx/</a>)<br><br>
 					<code class="bash">
-						sudo apt install gcc make linux-headers-`uname -r`
-						cd /opt
-						wget https://files.dev47apps.net/linux/droidcam_latest.zip
-						unzip droidcam_latest.zip -d droidcam && cd droidcam
-						sudo ./install
+sudo apt install gcc make linux-headers-`uname -r`
+cd /opt
+wget https://files.dev47apps.net/linux/droidcam_latest.zip
+unzip droidcam_latest.zip -d droidcam && cd droidcam
+sudo ./install
 					</code><br><br>
 					Then we'll make a desktop file.<br>
 					Put the following text in ~/.local/share/applications/droidcam.desktop<br><br>
 					<code>
-						[Desktop Entry]<br>
-						Version=1.0<br>
-						Type=Application<br>
-						Terminal=false<br>
-						Name=DroidCam<br>
-						Exec=droidcam<br>
-						Comment=Use your Android phone as a wireless webcam or an IP Cam!<br>
-						Categories=GNOME;GTK;Video;
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Name=DroidCam
+Exec=droidcam
+Comment=Use your Android phone as a wireless webcam or an IP Cam!
+Categories=GNOME;GTK;Video;
 					</code><br><br>
 					Now test it by going into your applications and launching Droidcam. You should see a window pop up.
 				</p>
@@ -81,7 +81,7 @@
 		<script>
 			//Following JavaScript modified from code by jayms at stackoverflow.com. Licensed under CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
 			var _pre = document.querySelector("code.bash");
-			_pre.innerHTML="<span class='line'>"+(_pre.textContent.split("\n").filter(Boolean).join("</span><br><span class='line'>"))+"</span>";
+			_pre.innerHTML="<span class='line'>"+(_pre.textContent.split("\n").filter(Boolean).join("</span>\n<span class='line'>"))+"</span>";
 			//End of JavaScript code
 		</script>
 	</body>
