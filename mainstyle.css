@@ -145,5 +145,6 @@ code {
     line-height: 2;
     border-radius: 3px;
     background-color: #FEFEFE;
-    padding: .2em .4em;   
+    padding: .2em .4em;
+    display: block;
 }
