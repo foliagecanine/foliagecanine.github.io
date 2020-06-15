@@ -50,16 +50,16 @@
 				</ul>
 				<h2>Setting up the computer</h2>
 				<p>
-					First, we'll install the Droidcam client from dev47apps.com (commands based off of instructions on <a href="https://www.dev47apps.com/droidcam/linuxx/">dev47apps.com/droidcam/linuxx/</a>)<br>
+					First, we'll install the Droidcam client from dev47apps.com (commands based off of instructions on <a href="https://www.dev47apps.com/droidcam/linuxx/">dev47apps.com/droidcam/linuxx/</a>)<br><br>
 					<code>
 						sudo apt install gcc make linux-headers-`uname -r`<br>
 						cd /opt<br>
 						wget https://files.dev47apps.net/linux/droidcam_latest.zip<r>
 						unzip droidcam_latest.zip -d droidcam && cd droidcam<br>
 						sudo ./install<br>
-					</code>
+					</code><br>
 					Then we'll make a desktop file.<br>
-					Put the following text in ~/.local/share/applications/droidcam.desktop<br>
+					Put the following text in ~/.local/share/applications/droidcam.desktop<br><br>
 					<code>
 						[Desktop Entry]<br>
 						Version=1.0<br>
@@ -69,7 +69,7 @@
 						Exec=droidcam<br>
 						Comment=Use your Android phone as a wireless webcam or an IP Cam!<br>
 						Categories=GNOME;GTK;Video;<br>
-					</code>
+					</code><br>
 					Now test it by going into your applications and launching Droidcam. You should see a window pop up.
 				</p>
 				<br>
