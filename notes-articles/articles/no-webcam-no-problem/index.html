@@ -51,16 +51,14 @@ No webcam? No pro<!DOCTYPE html>
 				<h2>Setting up the computer</h2>
 				<p>
 					First, we'll install the Droidcam client from dev47apps.com (commands based off of instructions on <a href="https://www.dev47apps.com/droidcam/linuxx/">dev47apps.com/droidcam/linuxx/</a>)<br><br>
-					<code class="bash">
-sudo apt install gcc make linux-headers-`uname -r`
+<code class="bash">sudo apt install gcc make linux-headers-`uname -r`
 cd /opt
 wget https://files.dev47apps.net/linux/droidcam_latest.zip
 unzip droidcam_latest.zip -d droidcam && cd droidcam
 sudo ./install</code><br><br>
 					Then we'll make a desktop file.<br>
 					Put the following text in ~/.local/share/applications/droidcam.desktop<br><br>
-					<code>
-[Desktop Entry]
+<code>[Desktop Entry]
 Version=1.0
 Type=Application
 Terminal=false
