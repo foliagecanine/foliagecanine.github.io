@@ -151,7 +151,7 @@ code {
     white-space: pre-line;
 }
 
-code::before {
+code .line::before {
     content: "$";
     padding-right: 8px;   
 }
