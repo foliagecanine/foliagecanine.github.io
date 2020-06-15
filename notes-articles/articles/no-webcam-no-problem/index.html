@@ -52,10 +52,10 @@
 				<p>
 					First, we'll install the Droidcam client from dev47apps.com (commands based off of instructions on <a href="https://www.dev47apps.com/droidcam/linuxx/">dev47apps.com/droidcam/linuxx/</a>)<br><br>
 					<code class="bash">
-						sudo apt install gcc make linux-headers-`uname -r`<br>
-						cd /opt<br>
-						wget https://files.dev47apps.net/linux/droidcam_latest.zip<br>
-						unzip droidcam_latest.zip -d droidcam && cd droidcam<br>
+						sudo apt install gcc make linux-headers-`uname -r`
+						cd /opt
+						wget https://files.dev47apps.net/linux/droidcam_latest.zip
+						unzip droidcam_latest.zip -d droidcam && cd droidcam
 						sudo ./install
 					</code><br><br>
 					Then we'll make a desktop file.<br>
@@ -81,7 +81,7 @@
 		<script>
 			//Following JavaScript modified from code by jayms at stackoverflow.com. Licensed under CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
 			var _pre = document.querySelector("code.bash");
-			_pre.innerHTML="<span class='line'>"+(_pre.textContent.split("\n").filter(Boolean).join("<br></span><span class='line'>"))+"</span>";
+			_pre.innerHTML="<span class='line'>"+(_pre.textContent.split("\n").filter(Boolean).join("</span><br><span class='line'>"))+"</span>";
 			//End of JavaScript code
 		</script>
 	</body>
