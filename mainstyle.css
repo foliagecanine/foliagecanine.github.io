@@ -148,10 +148,11 @@ code {
     padding: .2em .4em;
     display: block;
     width: 50%;
+    overflow-x: auto;
     white-space: pre-line;
 }
 
 code .line::before {
     content: "$";
-    padding-right: 8px;   
+    padding-right: 4px;   
 }
