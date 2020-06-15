@@ -22,17 +22,18 @@
 				<br>
 				<h1>Introduction</h1>
 				<p>
-				Like many people around this time, I use video conferencing software almost every day.<br>
-				However, like many people, I don't have a webcam or microphone for my desktop computer.<br>
-				<strong>It's time to fix that.</strong><br>
-				<br>
-				I dual-boot Windows™ 7 (yep) and Ubuntu 20.04 for my main desktop computer.<br>
-				It doesn't have a webcam or microphone (and I don't want to buy one), so I generally use a weak laptop for my video calls (the powerful one I was using died).<br>
-				However, since it's so weak, there's stuttering, voice breaking, and even lag in the chat!<br>
-				My desktop isn't the best, but it is much better than the laptop.<br>
-				I spent a few hours working on this problem and found a solution that works relatively well.<br>
-				It uses an Android™ device as both the webcam and microphone, and is completely free.<br>
-				<br>
+					Like many people around this time, I use video conferencing software almost every day.<br>
+					However, like many people, I don't have a webcam or microphone for my desktop computer.<br>
+					<strong>It's time to fix that.</strong><br>
+					<br>
+					I dual-boot Windows™ 7 (yep) and Ubuntu 20.04 for my main desktop computer.<br>
+					It doesn't have a webcam or microphone (and I don't want to buy one), so I generally use a weak laptop for my video calls (the powerful one I was using died).<br>
+					However, since it's so weak, there's stuttering, voice breaking, and even lag in the chat!<br>
+					My desktop isn't the best, but it is much better than the laptop.<br>
+					I spent a few hours working on this problem and found a solution that works relatively well.<br>
+					It uses an Android™ device as both the webcam and microphone, and is completely free.<br>
+					<br>
+				</p>
 				<h2>Requirements</h2>
 				<ul>
 					<li>A computer running Ubuntu</li>
@@ -47,7 +48,30 @@
 					<li>An internet connection for both devices</li>
 					<li>Ability to be on the same network as the Android device</li>
 				</ul>
-				... to be continued<br>
+				<h2>Setting up the computer</h2>
+				<p>
+					First, we'll install the Droidcam client from dev47apps.com (commands based off of instructions on <a href="https://www.dev47apps.com/droidcam/linuxx/">dev47apps.com/droidcam/linuxx/</a>)
+					<code>sudo apt install gcc make linux-headers-`uname -r`</code>
+					<code>
+						cd /opt<br>
+						wget https://files.dev47apps.net/linux/droidcam_latest.zip<br>
+						unzip droidcam_latest.zip -d droidcam && cd droidcam<br>
+						sudo ./install
+					</code>
+					Then we'll make a desktop file.
+					Put the following text in ~/.local/share/applications/droidcam.desktop
+					<code>
+						[Desktop Entry]<br>
+						Version=1.0<br>
+						Type=Application<br>
+						Terminal=false<br>
+						Name=DroidCam<br>
+						Exec=droidcam<br>
+						Comment=Use your Android phone as a wireless webcam or an IP Cam!<br>
+						Categories=GNOME;GTK;Video;
+					</code>
+					Now test it by going into your applications and launching Droidcam. You should see a window pop up.
+				</p>
 				<br>
 				Android is a trademark of Google LLC.
 				Windows is a trademark of Microsoft Corporation.
