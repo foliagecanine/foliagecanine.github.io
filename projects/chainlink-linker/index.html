@@ -60,8 +60,8 @@
 		</div>
 		<script>
 			//Following JavaScript modified from code by jayms at stackoverflow.com. Licensed under CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
-			var _pre = document.querySelector("code.bash");
-			_pre.innerHTML="<span class='line'>"+(_pre.textContent.split("\n").filter(Boolean).join("</span>\n<span class='line'>"))+"</span>";
+			var _pre = document.querySelectorAll("code.bash");
+			_pre.forEach(function(i){i.innerHTML="<span class='line'>"+(_pre.textContent.split("\n").filter(Boolean).join("</span>\n<span class='line'>"))+"</span>";});
 			//End of JavaScript code
 		</script>
 	</body>
