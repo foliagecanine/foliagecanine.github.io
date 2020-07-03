@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/mainstyle.css">
+		<title>Projects | foliagecanine.github.io</title>
+	</head>
+	<body>
+		<ul class="topnav">
+		  <li><a href="/">Home</a></li>
+		  <li><a class="active" href="/projects">Projects</a></li>
+		  <li><a href="/notes-articles">Notes & Articles</a></li>
+		  <li class="right"><a href="/about">About</a></li>
+		</ul>
+		<div class="content">
+			<h1>About the Analog Audio Portable (AAP) format</h1>
+			<h2>How it works<h2>
+			<p>
+				The Analog Audio Portable format is a very simple audio format developed by me.<br>
+				Here is the outline of the format:<br>
+				<br>
+				The header consists of two 16 bit values.<br>
+				The first value defines the base tone in hertz.<br>
+				The second value defines the multiplier.<br>
+				A sound can therefore be calculated by (<tone_number> * multiplier) + base_tone .<br>
+				<br>
+				The rest of the file are little-endian 16 bit values describing the tones.<br>
+				Each tone is described using two 16 bit values.<br>
+				The first value is the tone number.
+				The second value is the tone duration in milliseconds.
+			</p>
+			<h2>Why the AAP format?</h2>
+			<p>
+				This format was developed to be easily read by microcontrollers and low-power computers.<br>
+				For example, and Arduino microcontroller board can easily decode an AAP file stored on an SD card and play it on a piezo buzzer.<br>
+				<br>
+				If the user wishes to not worry about base frequecies and multipliers, they can simply start reading from byte 4 and have hard-coded values for the base frequency and multiplier.
+			</p>
+		</div>
+	</body>
+</html>
