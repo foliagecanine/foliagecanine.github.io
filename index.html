@@ -5,6 +5,80 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="/mainstyle.css">
 		<title>Home | foliagecanine.github.io</title>
+		<style>
+			.itembox {
+				outline: solid #CCC 5px;
+				background-color: #EEE;
+				display: flex;
+				max-width: 750px;
+				height: 256px;
+				margin-bottom: 20px;
+				position: relative;
+			}
+			
+			.sideimg {
+				height: 100%;
+				border-right: solid gray 5px;
+			}
+			
+			.sidetext {
+				flex-grow: 1;
+				width: 100%;
+				padding-left: 20px;
+				position: relative;
+			}
+			
+			.itemheader {
+				background-color: #CCC;
+				margin-right: 20px;
+				padding-left: 5px;
+			}
+			
+			.itemheader a {
+				text-decoration: none;
+			}
+			
+			.midtext {
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			
+			.midtext .itemheader {
+				margin-right: 0px;
+			}
+			
+			.sidedesc {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			
+			.sidetag {
+				position: absolute;
+				bottom: 0px;
+				left: 30px;
+				color: blue;
+				background-color: gray;
+				padding: 3px 5px 3px 5px;
+			}
+			
+			.sidecommit {
+				position: absolute;
+				bottom: 0px;
+				right: 30px;
+				color: blue;
+				background-color: gray;
+				padding: 3px 5px 3px 5px;
+			}
+			
+			.sidedate {
+		   		position: absolute;
+				bottom: 0px;
+				right: 30px;
+				color: blue;
+				background-color: gray;
+				padding: 3px 5px 3px 5px;
+			}
+		</style>
 	</head>
 	<body>
 		<ul class="topnav">
@@ -16,6 +90,101 @@
 		<div class="content">
 			<h1>foliagecanine.github.io</h1>
 			<p>foliagecanine's website of coding and other stuff</p>
+			<h2><a href="https://github.com/foliagecanine">Visit my GitHub!</a></h2>
+			<h1>What's new</h1>
+			<div class="itembox">
+				<div class="sideimg">
+					<img src="https://github.com/foliagecanine/my6502/raw/main/RESOURCE/BE6502Dino.gif" width=256>
+				</div>
+				<div class="sidetext">
+					<h1 class="itemheader"><a href="https://github.com/foliagecanine/my6502">my6502</a></h1>
+					<div class="sidedesc">
+						<p>My projects and libraries for the Ben Eater 6502 computer</p>
+					</div>
+					<p class="sidetag">Project</p>
+					<p class="sidecommit" id="foliagecanine/my6502">[Request Error]</p>
+				</div>
+			</div>
+			<div class="itembox">
+				<div class="sideimg">
+					<img src="https://foliagecanine.github.io/projects/TritiumOS.png">
+				</div>
+				<div class="sidetext">
+					<h1 class="itemheader"><a href="projects/tritium-os">TritiumOS</a></h1>
+					<div class="sidedesc">
+						<p>My hobby OS.<br>
+							Right now, it's got program loading, FAT16, and USB UHCI/xHCI support (HID only).<br>
+							I've been working on it for a year and 8 months as of 1/8/21. </p>
+					</div>
+					<p class="sidetag">Project</p>
+					<p class="sidecommit" id="foliagecanine/tritium-os">[Request Error]</p>
+				</div>
+			</div>
+			<div class="itembox">
+			  <div class="midtext">
+			  <h1 class="itemheader"><a href="notes-articles/articles/no-webcam-no-problem">No webcam? No problem!</a></h1>
+			  <div class="sidedesc">
+				<p>foliagecanine - created 6/13/2020 - foliagecanine.github.io<br>
+<br>
+How to use your android device as a webcam and a microphone for your peripheral-impaired Ubuntu install
+			  </div>
+			  <p class="sidetag">Article</p>
+			  <p class="sidedate">6/13/2020</p>
+			  </div>
+			</div>
 		</div>
 	</body>
+	<script>
+		//Use GitHub API to find last commit time
+		var getLastCommit = function (repo) {
+			//Step 1: Request commit list
+			var xhr = new XMLHttpRequest();
+			var commitjson = "";
+			xhr.open("Get", "https://api.github.com/repos/"+repo+"/commits",false);
+			xhr.send();
+			if (xhr.status!=200) {
+				// Return error if not 200
+				return [new Date(0),"ERROR"]	
+			}
+			commitjson = xhr.response;
+			//Step 2: Convert it to accessible JSON
+			commitjson = JSON.parse(commitjson);
+			//Step 3: Extract date of last commit
+			var lastTime = commitjson[0].commit.author.date;
+			//Step 4: Convert it to a Date type
+			lastTime = new Date(Date.parse(lastTime));
+			//Step 5: Extract commit message
+			var commitMessage = commitjson[0].commit.message;
+			//Step 6: Get short commit message
+			commitMessage = commitMessage.substring(0,commitMessage.indexOf("\n"));
+			if (commitMessage==="")
+				commitMessage = commitjson[0].commit.message;
+			//Step 7: Create array of objects to return
+			var retval = [lastTime, commitMessage]
+			//Step 8: Return
+			return retval
+		}
+		
+		var getTimeAgo = function(time) {
+			var timeDifference = new Date(new Date() - time);
+			timeDifference = timeDifference.getTime();
+			if (timeDifference<60*1000) {
+				return "Less than a minute ago";
+			} else if (timeDifference<60*60*1000) {
+				return Math.floor(timeDifference/(60*1000)) + " minutes ago";
+			} else if (timeDifference<24*60*60*1000) {
+				return Math.floor(timeDifference/(60*60*1000)) + " hours ago";
+			} else if (timeDifference<365.25*24*60*60*1000) {
+				return Math.floor(timeDifference/(24*60*60*1000)) + " days ago";
+			} else {
+				return Math.floor(timeDifference/(365.25*60*60*1000)) + " years ago";
+			}
+		}
+		
+		updateElements = document.getElementsByClassName("sidecommit");
+		for (var i = 0; i < updateElements.length; i++) {
+			commitInfo = getLastCommit(updateElements[i].id);
+			updateElements[i].innerHTML = getTimeAgo(commitInfo[0]) + ": " + commitInfo[1];
+		}
+	</script>
 </html>
