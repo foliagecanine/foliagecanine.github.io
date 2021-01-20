@@ -175,13 +175,13 @@ How to use your android device as a webcam and a microphone for your peripheral-
 			if (timeDifference<60*1000) {
 				return "Less than a minute ago";
 			} else if (timeDifference<60*60*1000) {
-				return Math.floor(timeDifference/(60*1000)) + " minutes ago";
+				return Math.floor(timeDifference/(60*1000)) + " minute" + (Math.floor(timeDifference/(60*1000))==1?"":"s") + " ago";
 			} else if (timeDifference<24*60*60*1000) {
-				return Math.floor(timeDifference/(60*60*1000)) + " hours ago";
+				return Math.floor(timeDifference/(60*60*1000)) + " hour" + (Math.floor(timeDifference/(60*60*1000))==1?"":"s") + " ago";
 			} else if (timeDifference<365.25*24*60*60*1000) {
-				return Math.floor(timeDifference/(24*60*60*1000)) + " days ago";
+				return Math.floor(timeDifference/(24*60*60*1000)) + " day" + (Math.floor(timeDifference/(24*60*60*1000))==1?"":"s") + " ago";
 			} else {
-				return Math.floor(timeDifference/(365.25*60*60*1000)) + " years ago";
+				return Math.floor(timeDifference/(365.25*24*60*60*1000)) + " year" + (Math.floor(timeDifference/(365.25*24*60*60*1000))==1?"":"s") + " ago";
 			}
 		}
 		
